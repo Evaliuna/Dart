@@ -38,4 +38,27 @@ void main() {
   Runes input = Runes('\u{1F605}'); //it will print emoji.\u then code of emoji.
   print(String.fromCharCodes(input));
   //if we don't want to set the data type then we can use var. it will automatically detect the data type.
+
+  //final vs const. if we set a variable as final or const then we can't change the value of that variable.final value can be set at runtime but const value must be set at compile time.
+  //final
+  final int age1 = 50; //it can be set at runtime.
+  print(
+    age,
+  ); //when we print the final variable it will initialize the value only once.
+  //const
+  const double pi =
+      3.1416; //it must be set at compile time.when we declare a variable as const it will allocate memory at compile time.
+  print(pi);
+
+  int x = 50;
+  int b = 20;
+
+  final age4 = x;
+  //const pi = b; //it will give error because b is not a constant value.
+}
+
+class Example {
+  final int age1 = 50;
+  static const double pi = 3.1416;
+  //instance variable can be final but can't be const.for this we have to use static const.
 }

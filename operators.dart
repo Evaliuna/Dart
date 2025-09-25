@@ -3,7 +3,8 @@ void main() {
   int b = 3;
   var result = a / b; //it will give double value.
   print(result);
-  var result2 = a ~/ b; //it will give int value.
+  var result2 =
+      a ~/ b; //it will give int value.it is called truncating division.
   print(result2);
 
   String name = "EVA";

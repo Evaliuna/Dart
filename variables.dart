@@ -60,6 +60,26 @@ void main() {
   print(
     'We are all $n now.',
   ); //string interpolation.we can use $ to take input variable in string.
+
+  String str = "5";
+  int i = num.parse(
+    str,
+  ); //string to int. if we are 100% sure that string is int then we can use int.parse(str);
+  print(i);
+
+  double d = num.parse("6.78"); //string to double.
+  print(d);
+
+  print(d.round()); //it will round the double value to nearest int value.
+  print(d.truncate()); //it will remove the decimal value and return int value.
+  print(i.isEven); //it will return true if int value is even otherwise false.
+  print(
+    i.isNegative,
+  ); //it will return true if int value is negative otherwise false.
+
+  bool var1;
+  var1 = 67 > 59;
+  print(var1); //it will return true if condition is true otherwise false.
 }
 
 class Example {

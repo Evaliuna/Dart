@@ -47,9 +47,10 @@ void main() {
 
   String name = "Batman";
   String str6 = "   Hello   hu";
-  String str7 = "Wo${6*6}rl$(name)d"; //if we want to do some operation inside string then we have to use ${}
+  String str7 =
+      "Wo${6 * 6}rl $name d"; //if we want to do some operation inside string then we have to use ${}
   String result = str6 + str7; //string concatenation
-  
+
   print(result);
   print(str6.length); //to find length of string.
   print(str6.toLowerCase()); //to convert string to lowercase.

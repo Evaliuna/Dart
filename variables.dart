@@ -62,12 +62,12 @@ void main() {
   ); //string interpolation.we can use $ to take input variable in string.
 
   String str = "5";
-  int i = num.parse(
-    str,
-  ); //string to int. if we are 100% sure that string is int then we can use int.parse(str);
+  int i =
+      num.parse(str)
+          as int; //string to int. if we are 100% sure that string is int then we can use int.parse(str);
   print(i);
 
-  double d = num.parse("6.78"); //string to double.
+  double d = num.parse("6.78") as double; //string to double.
   print(d);
 
   print(d.round()); //it will round the double value to nearest int value.

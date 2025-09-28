@@ -55,6 +55,11 @@ void main() {
 
   final age4 = x;
   //const pi = b; //it will give error because b is not a constant value.
+
+  var n = 10;
+  print(
+    'We are all $n now.',
+  ); //string interpolation.we can use $ to take input variable in string.
 }
 
 class Example {

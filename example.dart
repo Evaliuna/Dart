@@ -6,7 +6,7 @@ class Example {
 
   Example({required this.name1}) {
     print("This is my default constructor");
-  }
+  } //constructor can't have return type.
 
   myfunction() {
     print("This is my function");

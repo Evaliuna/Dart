@@ -51,4 +51,17 @@ void main() {
     print(j);
     j++;
   } while (j <= value1);
+
+  var productList = [
+    {'name': 'Product one', 'price': 100},
+    {'name': 'Product two', 'price': 200},
+    {'name': 'Product three', 'price': 300},
+    {'name': 'Product four', 'price': 400},
+  ];
+
+  for (var Oneproduct in productList) {
+    var item =
+        "Product Name is ${Oneproduct['name']} and Price is ${Oneproduct['price']}"; //rather than using + we can use $ to take input variable in string.
+    print(item);
+  }
 }

@@ -18,4 +18,14 @@ void man() {
 
 convertStringIntoInt(value) {
   print(int.parse(value)); //it will convert string into int.
+
+  Add(5, 7);
+  Add(-9, 2);
+  Add(99);
+}
+
+void Add(int num1, [int? num2]) {
+  //print(num1 + num2); //it will give error because num2 is null.
+  print(num1); //it will print num1 only.
+  print(num2); //it will print null.
 }

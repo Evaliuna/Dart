@@ -64,16 +64,18 @@ void main() {
         "Product Name is ${Oneproduct['name']} and Price is ${Oneproduct['price']}"; //rather than using + we can use $ to take input variable in string.
     print(item);
   }
+  //expression which evaluate a condition and return one of the two values based on the condition is called expression of
 
-  //for loop
-  int num1 = 90;
+  //loop label
+  outerLoop:
+  for (int i = 1; i <= 3; i++) {
+    print('Outer loop iteration: $i');
 
-  var result = num1 < 100 ? "It is less than 100" : "It is greater than 100";
-  print(result);
-
-  int? num2 = null;
-
-  var result1 =
-      num2 ?? 'It is null'; //if num2 is null then it will take 'It is null'.
-  print(result1);
+    for (int j = 1; j <= 3; j++) {
+      if (i == 2 && j == 2) {
+        break outerLoop; //it will break the outer loop when i is 2 and j is 2.and finish the execution of the program.
+      }
+      print('  Inner loop iteration: $j');
+    }
+  }
 }

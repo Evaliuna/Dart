@@ -35,4 +35,61 @@ void main() {
   int? j = null; //null aware assignment operator
   j ??= 10; //if j is null then it will take 20.
   print(j);
+
+  //bitwise operator
+
+  int x = 5; //0101
+  int y = 3; //0011
+
+  //bitwise AND
+  /*  0101
+      0011
+      -----
+      0001 = 1
+    */
+  print(x & y); //1
+
+  //bitwise OR
+  /*  0101
+      0011
+      -----
+      0111 = 7
+    */
+  print(x | y); //7
+  //bitwise XOR
+  /*  0101
+      0011
+      -----
+      0110 = 6
+    */
+  print(x ^ y); //6
+
+  //bitwise NOT
+  /*  0101   
+      -----
+      1010 = -6 (in 2's complement)
+    */
+
+  print(~x); //-6
+
+  //left shift
+  /*  0101 << 1
+      -----
+      1010 = 10
+    */
+  print(x << 1); //10
+
+  //right shift
+  /*  0101 >> 1   
+        -----
+        0010 = 2
+        */
+  print(x >> 1); //2
+
+  //unsigned right shift
+  /*  0101 >>> 1   
+        -----
+        0010 = 2
+        */
+  print(x >>> 1); //2
 }

@@ -7,6 +7,53 @@ void main() {
   var obj = Example1();
   obj.setAge = 20; //setter method
   print(obj.getAge); //getter method
+
+  Vehicle v1 = new Vehicle(100);
+  Vehicle v2 = new Vehicle.empty(); //other aulternative constructor
+
+  v1.Drive();
+  print(v1.maxSpeed);
+  v1.maxSpeed = 89;
+  print(v1.maxSpeed);
+  print(v2.maxSpeed);
+
+  /*cascading operator
+
+  Car c1 = new Car();
+  c1.Drive();
+  c1.Hello();
+  c1.Drive();
+  c1.Hello();
+
+  //insted of this we can use cascading
+  c1..Drive()..Hello()..Drive()..Hello();//all at once
+  */
+}
+
+class Vehicle {
+  Vehicle(int speed) {
+    print('Constructor');
+    maxSpeed = speed;
+  }
+
+  Vehicle.empty() {
+    //custom constructor or named constructor
+    print('Named Constructor');
+  }
+
+  void Drive() {
+    print('Drive drive drive');
+  }
+
+  int maxSpeed = 60;
+
+  void set _maxSped(int speed) {
+    maxSpeed = speed * 2;
+  }
+
+  int get maxSped {
+    return maxSpeed;
+  }
 }
 
 class Father {
@@ -73,5 +120,6 @@ class B implements A {
     print('this is method B from class B');
   }
 }
+
 //in extend override is optional but in implement override is mandatory for all the methods of the class which is implemented.
 //in extend we can't implement multiple class but in implement we can implement multiple class.

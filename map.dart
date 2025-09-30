@@ -10,4 +10,12 @@ void main() {
   print(map.containsValue('five')); //checking value is present or not
   print(map.keys); //printing all keys
   print(map.values); //printing all values
+
+  var epicMap = {'key1': 343, 'key2': 'EpicValue'};
+
+  epicMap['key3'] = 67;
+
+  print(epicMap);
+
+  epicMap.forEach((key, value) => print("$key and $value")); //for each loop
 }

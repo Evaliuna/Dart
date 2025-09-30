@@ -50,6 +50,49 @@ void main() {
     print(error);
   }
   print("End of Application");
+
+  //manually throwing the exception
+
+  int n1 = 100;
+  int n2 = 5;
+
+  try {
+    // Manually throwing a FormatException if n1 equals 100
+    if (n1 == 100)
+      throw new FormatException();
+    else
+      print(n1 ~/ n2);
+  } on FormatException {
+    print(
+      'Number cannot be 100',
+    ); // Handles the case when n1 is 100 by catching the FormatException
+  } catch (error) {
+    print(error);
+  } finally {
+    print('Finally');
+  }
+
+  //coustom exception
+  try {
+    // Manually throwing a FormatException if n1 equals 100
+    if (n1 == 100)
+      throw new EpicException();
+    else
+      print(n1 ~/ n2);
+  } on FormatException {
+    print(
+      'Number cannot be 100',
+    ); // Handles the case when n1 is 100 by catching the FormatException
+  } catch (error) {
+    print(error);
+  } finally {
+    print('Finally');
+  }
+}
+
+//coustom exception creation. exception class is builtin
+class EpicException implements Exception {
+  String errMsg() => "Epic Exception";
 }
 
 class Value implements Exception {

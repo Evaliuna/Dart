@@ -56,4 +56,9 @@ void main() {
   print(str6.toLowerCase()); //to convert string to lowercase.
   print(str6.toUpperCase()); //to convert string to uppercase.
   print(str6.trim()); //to remove space from start and end of string.
+
+  //runes are used to represent Unicode code points in a string.
+  String epicString = 'Hello World';
+  print(epicString.codeUnits); //ascii value of all will be printed in a list
+  print(epicString.codeUnitAt(1)); //specific word er ascii value er jonno
 }

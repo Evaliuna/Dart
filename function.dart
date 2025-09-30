@@ -69,7 +69,15 @@ void main() {
   mainfunction1(
     addTwoNumbers,
   ); //passing function as parameter.if a function return another function or use a function as parameter then it is called higher order function.
+
+  //lambda functions also called arrow functions are functions created with a single line of code.
+  Epic();
+  String res = EpicReturn();
+  print(res);
 }
+
+Epic() => print("We are epic"); //one line function
+String EpicReturn() => "Hi"; //return function
 
 mainfunction() {
   return () => print("returning a function"); //=> is used for arrow function.
@@ -77,4 +85,16 @@ mainfunction() {
 
 mainfunction1(Function function) {
   function(); //calling the function which is passed as parameter.
+
+  //recursive function
+  int res = CalculateFactorial(15);
+  print(res);
+}
+
+int CalculateFactorial(int n) {
+  if (n <= 0) {
+    return 1; //base condition
+  } else {
+    return n * CalculateFactorial(n - 1); //recursive call
+  }
 }

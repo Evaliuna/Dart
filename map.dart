@@ -1,3 +1,5 @@
+import 'dart:collection'; //fpr hashmap
+
 void main() {
   var map = {1: 'one', 2: 'two', 3: 'three'};
   print(map);
@@ -18,4 +20,12 @@ void main() {
   print(epicMap);
 
   epicMap.forEach((key, value) => print("$key and $value")); //for each loop
+
+  var hashy = new HashMap();
+
+  hashy['key1'] = 10;
+  hashy['key2'] = "Hello World";
+
+  print(hashy);
+  print(hashy['key2']);
 }
